@@ -4,7 +4,6 @@ import static org.junit.Assert.fail;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
 import javax.inject.Inject;
 import javax.sql.DataSource;
@@ -13,6 +12,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.cen.persistence.FastDao;
 
 import lombok.extern.log4j.Log4j;
 
@@ -38,7 +39,7 @@ public class JDBC_TEST {
 						"all_care",
 						"all_care"
 						)){
-			log.info(con);
+			log.info("+++++++++++ " + con);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}//try
@@ -57,6 +58,15 @@ public class JDBC_TEST {
 			fail(e.getMessage());
 		}//try		
 	}//testDataSource
+	
+	@Inject
+	private FastDao dao;
+	
+	@Test
+	public void testDao() throws Exception {
+		System.out.println("@@@@@@@@@@ " + dao);
+		log.info("++++++" + dao.create());
+	}//testDao
 	
 	
 }//end class

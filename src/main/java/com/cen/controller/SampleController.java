@@ -12,8 +12,9 @@ import lombok.extern.log4j.Log4j;
 public class SampleController {
 
 	@GetMapping("/all")
-	public void doAll() {
-		log.info("SampleController :: doAll() invoked!!!"); 
+	public String doAll() {
+		log.info("SampleController :: doAll() invoked!!!");
+		return "all";
 	}//doAll
 	
 	@GetMapping("/member")

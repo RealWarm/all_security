@@ -12,14 +12,14 @@ import lombok.extern.log4j.Log4j;
 public class SampleController {
 
 	@GetMapping("/all")
-	public String doAll() {
-		log.info("SampleController :: doAll() invoked!!!");
-		return "all";
+	public void doAll() {
+		log.info("SampleController :: doAll() invoked!!!");		
 	}//doAll
 	
 	@GetMapping("/member")
-	public void doMember() {
+	public String doMember() {
 		log.info("SampleController :: doMember() invoked!!!");
+		return "member";
 	}//doMember
 	
 	@GetMapping("/admin")

@@ -1,16 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
-</head>
+</head>W
 <body>
 	<h1> Logout Page </h1>
 	<form action="/customLogout" method="post">
-		<input type="hidden" name="${_csrf.paramterName}" value="${_csrf.token}">
-		<button>로그아웃</button>		
+		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+		<button>濡쒓렇�븘�썐</button>		
 	</form>
 </body>
 </html>

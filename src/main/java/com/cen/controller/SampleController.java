@@ -12,8 +12,9 @@ import lombok.extern.log4j.Log4j;
 public class SampleController {
 
 	@GetMapping("/all")
-	public void doAll() {
+	public String doAll() {
 		log.info("SampleController :: doAll() invoked!!!");		
+		return "all";
 	}//doAll
 	
 	@GetMapping("/member")
@@ -23,8 +24,24 @@ public class SampleController {
 	}//doMember
 	
 	@GetMapping("/admin")
-	public void doAdmin() {
+	public String doAdmin() {
 		log.info("SampleController :: doAdmin() invoked!!!");
+		return "admin";		
 	}//doAdmin
+	
+//	@GetMapping("/all")
+//	public void doAll() {
+//		log.info("SampleController :: doAll() invoked!!!");
+//	}//doAll
+//	
+//	@GetMapping("/member")
+//	public void doMember() {
+//		log.info("SampleController :: doMember() invoked!!!");
+//	}//doMember
+//	
+//	@GetMapping("/admin")
+//	public void doAdmin() {
+//		log.info("SampleController :: doAdmin() invoked!!!");
+//	}//doAdmin
 	
 }//end class

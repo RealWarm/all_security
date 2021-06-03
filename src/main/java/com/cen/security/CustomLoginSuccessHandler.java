@@ -14,9 +14,8 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 import lombok.extern.log4j.Log4j;
 
 
-// ·Î±×ÀÎ ÇÑ »ç¿ëÀÚ¿¡ ºÎ¿©µÈ ±ÇÇÑ Authentication °´Ã¼¸¦ ÀÌ¿ëÇØ¼­ 
-// »ç¿ëÀÚ°¡ °¡Áø ¸ğµç ±ÇÇÑÀ» ¹®ÀÚ¿­·Î Ã¼Å©ÇÑ´Ù.
-// ¸¸¾à »ç¿ëÀÚ°¡ 'ROLE_ADMIN' ±ÇÇÑÀ» °¡Á³´Ù¸é ·Î±×ÀÎ ÈÄ¿¡ ¹Ù·Î '/sample/admin'À¸·Î ÀÌµ¿ÇÏ°Ô µÇ´Â ¹æ½Ä
+// ë¡œê·¸ì¸ í•œ ì‚¬ìš©ìì— ë¶€ì—¬ëœ ê¶Œí•œ Authentication ê°ì²´ë¥¼ ì´ìš©í•´ì„œ ì‚¬ìš©ìê°€ ê°€ì§„ ëª¨ë“  ê¶Œí•œì„ ë¬¸ìì—´ë¡œ ì²´í¬í•©ë‹ˆë‹¤
+// ì‚¬ìš©ìê°€ 'ROLE_ADMIN' ê¶Œí•œì„ ê°€ì¡Œë‹¤ë©´ ë¡œê·¸ì¸í›„ '/sample/admin' ìœ¼ë¡œ ì´ë™í•˜ê²Œ í•˜ëŠ” ë°©ì‹ 
 @Log4j
 public class CustomLoginSuccessHandler 
 				implements AuthenticationSuccessHandler{

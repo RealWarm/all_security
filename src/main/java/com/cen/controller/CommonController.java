@@ -20,7 +20,8 @@ public class CommonController {
 	
 	@GetMapping("/customLogin")
 	public void loginInput(String error, String logout, Model model) {
-		log.info("CommonController :: loginInput() invoked!!!!!!!");
+//		log.info("@@@CommonController :: loginInput() invoked!!!!!!!");
+		System.out.println("@@@CommonController :: loginInput() invoked!!!!!!!");
 		System.out.println("error :: " + error + " || " + "logout :: " + logout);
 		if(error!=null) {
 			model.addAttribute("error", "Login Error Check Your Account by Hoon");

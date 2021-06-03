@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>Insert tidasdfasdtle here</title>
 </head>
 <body>
 	<h1>/sample/all page</h1>

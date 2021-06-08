@@ -30,10 +30,10 @@ public class MemberTests {
 	@Test
 	public void testIsertMember() {
 		
-		System.out.println("PasswordEncoder :: " + pwencoder);
-//		for(int i=0; i<100; i++) {
-//			System.out.println(i + " : " + pwencoder.encode("pw"+i));
-//		}//for-i
+//		System.out.println("PasswordEncoder :: " + pwencoder);
+		for(int i=0; i<100; i++) {
+			System.out.println(i + " : " + pwencoder.encode("pw"+i));
+		}//for-i
 		
 	}//testIsertMember
 	

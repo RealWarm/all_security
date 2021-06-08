@@ -13,7 +13,7 @@
 		class="com.cen.security.CustomLoginSuccessHandler"></bean>
 		
 	<!-- 32.2.2 -->
-	<!-- <bean id="customPasswordEncoder"
+<!-- 	<bean id="customPasswordEncoder"
 		class="com.cen.security.CustomNoOpPasswordEncoder"></bean> -->
 	<bean id="bcryptPasswordEncoder"
 		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
@@ -47,7 +47,8 @@
 	<security:authentication-manager>
 		<security:authentication-provider>
 			<security:jdbc-user-service data-source-ref="dataSource"/>			
-			<security:password-encoder ref="customPasswordEncoder"/>
+			<!-- <security:password-encoder ref="customPasswordEncoder"/> -->
+			<security:password-encoder ref="bcryptPasswordEncoder"/>
 			
 			<!-- <security:user-service>
 				<security:user name="member" password="{noop}member" authorities="ROLE_MEMBER"/>

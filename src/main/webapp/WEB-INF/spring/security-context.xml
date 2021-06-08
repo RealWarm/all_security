@@ -11,8 +11,12 @@
 		class="com.cen.security.CustomAccessDeniedHandler"></bean>
 	<bean id="customLoginSuccess"
 		class="com.cen.security.CustomLoginSuccessHandler"></bean>
-	<bean id="customPasswordEncoder"
-		class="com.cen.security.CustomNoOpPasswordEncoder"></bean>
+		
+	<!-- 32.2.2 -->
+	<!-- <bean id="customPasswordEncoder"
+		class="com.cen.security.CustomNoOpPasswordEncoder"></bean> -->
+	<bean id="bcryptPasswordEncoder"
+		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
 						
 	<!--  -->
 	<security:http auto-config="true" use-expressions="true">
@@ -42,10 +46,13 @@
 	<!--  -->
 	<security:authentication-manager>
 		<security:authentication-provider>
-			<security:user-service>
+			<security:jdbc-user-service data-source-ref="dataSource"/>			
+			<security:password-encoder ref="customPasswordEncoder"/>
+			
+			<!-- <security:user-service>
 				<security:user name="member" password="{noop}member" authorities="ROLE_MEMBER"/>
 				<security:user name="admin"  password="{noop}admin"  authorities="ROLE_MEMBER, ROLE_ADMIN"/>
-			</security:user-service>
+			</security:user-service> -->
 		</security:authentication-provider>
 	</security:authentication-manager>
 

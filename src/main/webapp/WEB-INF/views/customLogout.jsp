@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-</head>W
+</head>
 <body>
 	<h1> Logout Page </h1>
 	<form action="/customLogout" method="post">

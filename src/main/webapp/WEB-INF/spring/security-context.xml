@@ -44,8 +44,17 @@
 		<!-- 31.5 CustomLoginSuccessHandler를 빈으로 등록한다 -->
 		<security:form-login login-page="/customLogin" authentication-success-handler-ref="customLoginSuccess" />		
 		
+		
+		<!-- 35강 -->
+		<!-- dao 만든적이 없는데 db에 데이터가 들어감 왜지?? >>  -->
+		<security:remember-me
+			data-source-ref="dataSource" token-validity-seconds="604800"/>
+		
+		<!-- 35강 -->
 		<!-- 여기 맞나? -->
-		<security:logout logout-url="/customLogout" invalidate-session="true"/>
+		<!-- <security:logout logout-url="/customLogout" invalidate-session="true"/> -->
+		<security:logout logout-url="/customLogout"
+			invalidate-session="true" delete-cookies="remember-me, JSESSION_ID"/>
 		
 	</security:http>
 	

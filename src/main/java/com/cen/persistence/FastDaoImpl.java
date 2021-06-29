@@ -5,9 +5,13 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
-import lombok.extern.log4j.Log4j;
+import com.cen.controller.CommonController;
 
-@Log4j
+import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
+
+//@Log4j
+@Slf4j
 @Repository
 public class FastDaoImpl implements FastDao {
 	

@@ -16,8 +16,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.cen.persistence.FastDao;
 
 import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 
-@Log4j
+//@Log4j
+@Slf4j
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
 public class JDBC_TEST {

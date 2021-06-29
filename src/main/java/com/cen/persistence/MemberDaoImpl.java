@@ -5,12 +5,15 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
+import com.cen.controller.CommonController;
 import com.cen.domain.MemberVO;
 
 import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 
 
-@Log4j
+//@Log4j
+@Slf4j
 @Repository
 public class MemberDaoImpl implements MemberDao{
 		

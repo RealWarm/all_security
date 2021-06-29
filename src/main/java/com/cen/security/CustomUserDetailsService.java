@@ -6,13 +6,16 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
+import com.cen.controller.CommonController;
 import com.cen.domain.MemberVO;
 import com.cen.persistence.MemberDao;
 import com.cen.security.domain.CustomUser;
 
 import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 
-@Log4j
+//@Log4j
+@Slf4j
 public class CustomUserDetailsService 
 			implements UserDetailsService{
 

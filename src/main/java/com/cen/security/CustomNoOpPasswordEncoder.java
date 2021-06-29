@@ -2,9 +2,13 @@ package com.cen.security;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import lombok.extern.log4j.Log4j;
+import com.cen.controller.CommonController;
 
-@Log4j
+import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
+
+//@Log4j
+@Slf4j
 public class CustomNoOpPasswordEncoder 
 				implements PasswordEncoder{
 		
